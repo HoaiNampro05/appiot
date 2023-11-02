@@ -1,3 +1,4 @@
+import base64
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
@@ -20,3 +21,10 @@ class Login(View):
         login(request,user)
         return render(request,'myapp/susscess_login.html')
 
+class  ProcessImage(View):
+    def post(self,request):
+        if request.method == 'POST':
+                image_data = request.FILES['image'].read()
+                encoded_image = base64.b64encode(image_data).decode('utf-8')
+                return render(request, 'myapp/processed_image.html', {'image': encoded_image})
+        return render(request, 'myapp/susscess_login.html')

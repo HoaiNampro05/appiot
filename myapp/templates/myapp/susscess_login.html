@@ -48,10 +48,11 @@
     <h1>Header</h1>
   </header>
   <div class="form-container">
-    <h2>Form</h2>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="image" required>
-      <button type="submit">Gửi</button>
+    <h1>Upload an Image</h1>
+    <form method="POST" enctype="multipart/form-data" action="{% url 'myapp:upload' %}">
+        {% csrf_token %}
+        <input type="file" name="image">
+        <button type="submit">Upload</button>
     </form>
   </div>
 
