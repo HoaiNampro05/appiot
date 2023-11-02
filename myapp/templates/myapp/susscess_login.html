@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang Giao Diện</title>
+  <style>
+    /* CSS cho header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* CSS cho footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* CSS cho sidebar */
+    .sidebar {
+      background-color: #f4f4f4;
+      width: 200px;
+      padding: 20px;
+    }
+
+    /* CSS cho form */
+    .form-container {
+      margin: 20px;
+    }
+
+    .form-container input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    .form-container button[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Header</h1>
+  </header>
+  <div class="form-container">
+    <h2>Form</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" required>
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>Footer</p>
+  </footer>
+</body>
+</html>

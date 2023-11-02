@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang Đăng Nhập</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-form {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f4f4f4;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box; /* Thêm thuộc tính box-sizing */
+    }
+
+    .login-form button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-form">
+    <h2>Đăng Nhập</h2>
+    <form action="" method = "post">
+        {% csrf_token %}
+      <input type="text" placeholder="Tên đăng nhập" name="user_name" required >
+      <input type="password" placeholder="Mật khẩu" name="password" required>
+      <button type="submit">Đăng Nhập</button>
+    </form>
+  </div>
+</body>
+</html>
